@@ -608,8 +608,22 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "consumption",
         "config": {
+            "name": "Neptune Consumption Value",
+            "value_template": "{{ value|int }}",
+            "state_class": "total_increasing",
+        }
+    },
+
+
+    "Consumption": {
+        "device_type": "sensor",
+        "object_suffix": "consumption",
+        "config": {
             "name": "SCMplus Consumption Value",
             "value_template": "{{ value|int }}",
+            "device_class": "gas",
+            "unit_of_measurement": "ccf",
+            "unique_id": "gas_meter_consumption",
             "state_class": "total_increasing",
         }
     },
