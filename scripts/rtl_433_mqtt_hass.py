@@ -363,7 +363,7 @@ mappings = {
             "name": "Rain Total",
             "unit_of_measurement": "mm",
             "value_template": "{{ (float(value|float) * 25.4) | round(2) }}",
-     }
+        }
     },
 
     "rain_rate_in_h": {
@@ -623,7 +623,6 @@ mappings = {
             "value_template": "{{ value|int }}",
             "device_class": "gas",
             "unit_of_measurement": "ccf",
-            "unique_id": "gas_meter_consumption",
             "state_class": "total_increasing",
         }
     },
