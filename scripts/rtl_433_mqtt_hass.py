@@ -363,7 +363,7 @@ mappings = {
             "name": "Rain Total",
             "unit_of_measurement": "mm",
             "value_template": "{{ (float(value|float) * 25.4) | round(2) }}",
-     }
+        }
     },
 
     "rain_rate_in_h": {
@@ -608,8 +608,23 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "consumption",
         "config": {
+            "name": "Water Consumption Value",
+            "value_template": "{{ value|int }}",
+            "device_class": "water",
+            "unit_of_measurement": "gal",
+            "state_class": "total_increasing",
+        }
+    },
+
+
+    "Consumption": {
+        "device_type": "sensor",
+        "object_suffix": "consumption",
+        "config": {
             "name": "SCMplus Consumption Value",
             "value_template": "{{ value|int }}",
+            "device_class": "gas",
+            "unit_of_measurement": "ccf",
             "state_class": "total_increasing",
         }
     },
